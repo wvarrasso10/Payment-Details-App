@@ -1,0 +1,16 @@
+src
+  +--->app
+  |  +--->payment-details
+  |  |    |--payment-details component
+  |  |    +--payment-detail
+  |  |    |  |--payment-detail component
+  |  |    |
+  |  |    +-->payment-detail-list
+  |  |    |  |--payment-detail-list component
+  |  |    |
+  |  |    +-->shared
+  |  |    |  |--payment-detail model
+  |  |    |  |--payment-detail service
+  |  |--app.module.ts
+  |
+  |--index.html (path for icons)

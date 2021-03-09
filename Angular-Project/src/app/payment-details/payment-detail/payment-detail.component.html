@@ -1,0 +1,49 @@
+
+    <div class="container" *ngIf="service.formData">
+      <input type="hidden" name="PMid" [value]="service.formData.PMId">
+      <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+        <div class="field">
+            <label class="label"> Name </label>
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" name="CardOwnerName" #CardOwnerName = "ngModel" [(ngModel)]="service.formData.CardOwnerName" type="search" placeholder="Name">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user-circle"></i>
+              </span>
+            </p>
+        </div>
+        <div class="field">
+          <label class="label"> Card Number </label>
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" name="CardNumber" #CardNumber = "ngModel" [(ngModel)]="service.formData.CardNumber" type="search" placeholder="eg: 123456789">
+            <span class="icon is-small is-left">
+              <i class="far fa-credit-card"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label"> Expiration Date </label>
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" name="ExpirationDate" #ExpirationDate = "ngModel" [(ngModel)]="service.formData.ExpirationDate" type="search" placeholder="eg: 01/12">
+            <span class="icon is-small is-left">
+              <i class="fas fa-calendar"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label"> CVV </label>
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" name="CVV" #CVV = "ngModel" [(ngModel)]="service.formData.CVV" type="search" placeholder="eg: 123">
+            <span class="icon is-small is-left">
+              <i class="fas fa-key"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-success">
+              Login
+            </button>
+          </p>
+        </div>
+      </form>
+    </div>

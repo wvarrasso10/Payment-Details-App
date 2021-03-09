@@ -1,0 +1,19 @@
+<table class="table is-fullwidth  is-striped is-hoverable">
+  <thead>
+    <tr>
+      <th>Card Owner Name</th>
+      <th>Card Number</th>
+      <th>Exp Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pd of paymentDetails.list">
+      <td (click)="populateForm(pd)">{{pd.CardOwnerName}}</td>
+      <td (click)="populateForm(pd)">{{pd.CardNumber}}</td>
+      <td (click)="populateForm(pd)">{{pd.ExpirationDate}}</td>
+      <td><span class="icon is-clickable is-hoverable"(click)="onDelete(pd.PMId)">
+        <i class="far fa-trash-alt fa-lg has-text-danger" ></i>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
